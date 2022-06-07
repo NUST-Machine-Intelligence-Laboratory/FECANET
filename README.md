@@ -80,4 +80,4 @@ The experiment results on PASCAL-5i dataset
 
 The experiment results on COCO-20i dataset
 
-![result_2](\result_2.png)
+![result_2](result_2.png)
