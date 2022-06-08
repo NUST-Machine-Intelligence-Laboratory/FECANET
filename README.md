@@ -66,9 +66,16 @@ https://github.com/NUST-Machine-Intelligence-Laboratory/FECANET.git
 
 ### Test with our pretrained model.
 
-1. Download our pretrained model for fold 0 model stored in pretrained_model fold 
+1. Download our pretrained model for set 0 model using
+
+```
+wget https://fecanet.oss-cn-shanghai.aliyuncs.com/pretrained_model.zip
+```
+
+​	and put it under FECANet folder.
 
 2. To reproduce the result reported in Table 1 69.20(1-shot), 72.9(5-shot) of PASCAL-5_1 ), run 
+
 ```
 /test.py --datapath=/data/VOCdevkit --benchmark=pascal --backbone=vgg16/resnet50 --nshot=1/5 --fold=0 --load==/pretrained_model/dense+our_pascal{0}_resnet.log/best_model.pt --lr=1e-3 --bsz=20 --use_original_imgsize
 ```
