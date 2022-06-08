@@ -14,7 +14,7 @@ The architecture of our proposed model is as follows
 * Install PyTorch 1.5 with Python 3 
 * Clone this repo
 ```
-https://github.com/paipaipake/FECANet.git
+https://github.com/NUST-Machine-Intelligence-Laboratory/FECANET.git
 ```
 
 ### Data Preparation for VOC Dataset
@@ -66,7 +66,7 @@ https://github.com/paipaipake/FECANet.git
 
 ### Test with our pretrained model.
 
-1. Download our pretrained model for fold 0 model in pretrained_model fold 
+1. Download our pretrained model for fold 0 model stored in pretrained_model fold 
 
 2. To reproduce the result reported in Table 1 69.20(1-shot), 72.9(5-shot) of PASCAL-5_1 ), run 
 ```
@@ -81,3 +81,7 @@ The experiment results on PASCAL-5i dataset
 The experiment results on COCO-20i dataset
 
 ![result_2](result_2.png)
+
+## Acknowledgement
+
+We borrow code from public projects (huge thanks to all the projects). We mainly borrow code from [HSNet](https://github.com/juhongm999/hsnet).

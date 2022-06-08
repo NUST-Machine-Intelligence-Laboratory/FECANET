@@ -140,9 +140,8 @@ class FECANet(nn.Module):
                 pred_softmax = F.softmax(logit_mask, dim=1).detach().cpu()
                 for j in range(batch['query_img'].shape[0]):
                     sub_index = batch['idx'][j]
-                    # 因为dataset中都是存储的cpu格式，统一通过utils.to_cuda(batch)处理，所以必须转为tensor先
                     # pred_softmax = F.interpolate(logit_mask, pred_size, mode='bilinear', align_corners=True)
-                    dataset.history_mask_list[sub_index] = pred_softmax[j]  # 使用logit_mask作为pred，而不是最后的前景预测。
+                    dataset.history_mask_list[sub_index] = pred_softmax[j]
             else:
                 logit_mask = F.interpolate(logit_mask, batch['support_imgs'].size()[-2:], mode='bilinear', align_corners=True)
 

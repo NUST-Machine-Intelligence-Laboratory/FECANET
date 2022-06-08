@@ -36,7 +36,7 @@ class HPNLearner(nn.Module):
         self.encoder_layer4to3 = make_building_block(outch3, [outch3, outch3, outch3], [3, 3, 3], [1, 1, 1])
         self.encoder_layer3to2 = make_building_block(outch3, [outch3, outch3, outch3], [3, 3, 3], [1, 1, 1])
 
-        # residual 2D decoder 3个residual + 1个ASPP(去掉了，用普通的decoder处理了）
+        # residual 2D decoder 3个residual
         self.residule1 = nn.Sequential(
             nn.ReLU(),
             nn.Conv2d(outch3 + 2, outch3, kernel_size=3, stride=1, padding=1, bias=True),
